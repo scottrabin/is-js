@@ -8,10 +8,11 @@
 }(this, function() {
 
 	// Local references to global functions (better minification)
-	var toString = Object.prototype.toString;
+	var toString = Object.prototype.toString,
+		ArrayProto = Array.prototype;
 
 	return {
-		// Primitives
+		// Primitives - test for type exactness
 		string : function(s) {
 			return toString.call(s) === '[object String]';
 		},
@@ -20,6 +21,19 @@
 		},
 		bool   : function(b) {
 			return b === !!b;
+		},
+
+		// non-primitive builtin types
+		fn     : function(f) {
+			return toString.call(f) === '[object Function]';
+		},
+		// array - delegate to builtin if available
+		array  : ArrayProto.isArray || function(a) {
+			return toString.call(a) === '[object Array]';
+		},
+		// basically all Javascript types are objects
+		object : function(o) {
+			return o === Object(o);
 		}
 	};
 }));
