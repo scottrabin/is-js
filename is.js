@@ -87,9 +87,18 @@
 
 		// test for containment, in both arrays and objects
 		"in" : function(container, val) {
-			return (is_array(container) ? index_of(container, val) > -1 :
-					is_object(container) ? hasOwn.call(container, val) :
-					false);
+			if (is_array(container)) {
+				return index_of(container, val) > -1;
+			} else if (is_object(container)) {
+				for(var prop in container) {
+					if (hasOwn.call(container, prop) && container[prop] === val) {
+						return true;
+					}
+				}
+				return false;
+			} else {
+				return false;
+			}
 		},
 
 		// test for having any elements (if an array), any properties (if an object), or falsy-ness
