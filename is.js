@@ -34,6 +34,12 @@
 		// basically all Javascript types are objects
 		object : function(o) {
 			return o === Object(o);
+		},
+
+		// HTML elements
+		// https://github.com/documentcloud/underscore/blob/master/underscore.js#L836-838
+		element : function(e) {
+			return !!(e && e.nodeType === 1);
 		}
 	};
 }));
