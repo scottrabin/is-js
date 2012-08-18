@@ -40,6 +40,12 @@
 		// https://github.com/documentcloud/underscore/blob/master/underscore.js#L836-838
 		element : function(e) {
 			return !!(e && e.nodeType === 1);
+		},
+
+		// non-strict type checking
+		// http://dl.dropbox.com/u/35146/js/tests/isNumber.html
+		numeric : function(n) {
+			return !isNaN(parseFloat(n)) && isFinite(n);
 		}
 	};
 }));
