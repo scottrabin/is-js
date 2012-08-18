@@ -90,6 +90,20 @@
 			return (is_array(container) ? index_of(container, val) > -1 :
 					is_object(container) ? hasOwn.call(container, val) :
 					false);
+		},
+
+		// test for having any elements (if an array), any properties (if an object), or falsy-ness
+		empty : function(container) {
+			if (is_array(container)) {
+				return container.length === 0;
+			} else if (is_object(container)) {
+				for(var x in container) {
+					return false;
+				}
+				return true;
+			} else {
+				return !container;
+			}
 		}
 	};
 }));
