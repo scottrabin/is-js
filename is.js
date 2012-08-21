@@ -69,16 +69,11 @@
 		// https://github.com/jquery/jquery/blob/c14a6b385fa419ce67f115e853fb4a89d8bd8fad/src/core.js#L425-452
 		hash : function(o) {
 			// fail fast for falsy/non-object/HTMLElement/window objects
-			if (!o || typeof o !== 'object' || o.nodeType || o === window) {
-				return false;
-			}
-
-			// check constructor properties - objects don't have their own constructor,
+			// also check constructor properties - objects don't have their own constructor,
 			// and their constructor does not have its own `isPrototypeOf` function
-			if (o.constructor &&
-				! hasOwn.call(o, 'constructor') &&
-				! hasOwn.call(o.constructor.prototype, 'isPrototypeOf')
-			) {
+			if (!o || typeof o !== 'object' || is_element(o) || o === window ||
+			   (o.constructor && ! hasOwn.call(o, 'constructor') && ! hasOwn.call(o.constructor.prototype, 'isPrototypeOf'))
+			   ) {
 				return false;
 			}
 
