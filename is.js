@@ -90,7 +90,7 @@
 		},
 
 		// test for containment, in both arrays and objects
-		"in" : function(container, val) {
+		inside : function(container, val) {
 			if (is_array(container)) {
 				return index_of(container, val) > -1;
 			} else if (is_object(container)) {
