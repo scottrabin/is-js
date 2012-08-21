@@ -56,6 +56,11 @@
 		// basically all Javascript types are objects
 		object : is_object,
 
+		// duck typing, because there isn't really a good way to do this
+		regex  : function(r) {
+			return !!(r && r.test && r.exec && (r.ignoreCase || r.ignoreCase === false));
+		},
+
 		// HTML elements
 		element : is_element,
 
