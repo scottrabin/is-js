@@ -36,11 +36,12 @@
 
 	return {
 		// Primitives - test for type exactness
+		// typeof is faster; see http://jsperf.com/underscore-js-istype-alternatives/7
 		string : function(s) {
-			return toString.call(s) === '[object String]';
+			return (typeof s === 'string');
 		},
 		number : function(n) {
-			return Number(n) === n;
+			return (typeof n === 'number');
 		},
 		bool   : function(b) {
 			return b === !!b;
@@ -48,7 +49,7 @@
 
 		// non-primitive builtin types
 		fn     : function(f) {
-			return toString.call(f) === '[object Function]';
+			return (typeof f === 'function');
 		},
 		// array - delegates to builtin if available
 		array  : is_array,
