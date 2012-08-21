@@ -16,6 +16,12 @@
 		// these get used internally, so define it in scope and then expose it
 		is_array   = ArrayProto.isArray || function(a) { return toString.call(a) === '[object Array]'; },
 		is_object  = function(o) { return o === Object(o); },
+
+		is_element = (typeof HTMLElement !== 'undefined' ?
+					  function(e) { return (e instanceof HTMLElement); } :
+					  // https://github.com/documentcloud/underscore/blob/master/underscore.js#L836-838
+					  function(e) { return !!(e && e.nodeType === 1); }
+					 );
 		// in case the browser doesn't have it
 		index_of   = ArrayProto.indexOf ?
 			function(arr, val) { return arr.indexOf(val); } :
@@ -50,10 +56,7 @@
 		object : is_object,
 
 		// HTML elements
-		// https://github.com/documentcloud/underscore/blob/master/underscore.js#L836-838
-		element : function(e) {
-			return !!(e && e.nodeType === 1);
-		},
+		element : is_element,
 
 		// non-strict type checking
 		// http://dl.dropbox.com/u/35146/js/tests/isNumber.html
