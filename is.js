@@ -111,7 +111,9 @@
 				return container.length === 0;
 			} else if (is_object(container)) {
 				for(var x in container) {
-					return false;
+					if (hasOwn.call(container, x)) {
+						return false;
+					}
 				}
 				return true;
 			} else {
