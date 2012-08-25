@@ -105,6 +105,11 @@
 			}
 		},
 
+		// test for variable being undefined or null
+		set   : function(v) {
+			return v !== null && v !== (void 0);
+		},
+
 		// test for having any elements (if an array), any properties (if an object), or falsy-ness
 		empty : function(container) {
 			if (is_array(container)) {
