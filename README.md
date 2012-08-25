@@ -48,8 +48,12 @@ is.js
 		<th colspan="2">Collection properties</th>
 	</tr>
 	<tr>
-		<td><code>is.in(collection, value)</code></td>
+		<td><code>is.inside(collection, value)</code></td>
 		<td>Determines if the specified <code>value</code> is contained within the given <code>collection</code>. If <code>collection</code> is an array, <code>is.in</code> will check to see if <code>value</code> is an element in the array. If <code>collection</code> is an object, <code>is.in</code> will check if any property directly on the object is equal to the specified <code>value</code>.</td>
+	</tr>
+	<tr>
+		<td><code>is.set(variable)</code></td>
+		<td>Determines if the specified variable is <code>undefined</code> or <code>null</code>.</td>
 	</tr>
 	<tr>
 		<td><code>is.empty(collection)</code></td>
