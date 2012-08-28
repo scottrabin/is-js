@@ -1,6 +1,15 @@
 is.js
 =====
 
+Installing
+----------
+Cloning: `git clone https://github.com/scottrabin/is-js.git is-js`
+
+NPM: `npm install is-js`
+
+Usage
+-----
+
 <table>
 	<tr>
 		<th colspan="2">Basic type checking</th>
