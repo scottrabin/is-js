@@ -38,6 +38,10 @@ Usage
         <td><code>is.object(o)</code></td>
         <td>Determines if the argument is an object. Since nearly all Javascript types inherit from <code>Object</code>, this will most likely return <code>true</code> for anything but numbers, strings, booleans, and <code>null</code>/<code>undefined</code>. This function can be used to determine if arbitrary properties can be set on the given object.</td>
     </tr>
+	<tr>
+		<td><code>is.regex(r)</code></td>
+		<td>Determines if the argument is a regular expression object</td>
+	</tr>
     <tr>
         <td><code>is.element(e)</code></td>
         <td>Determines if the argument is an HTMLElement. Does not return <code>true</code> for <code>window</code> or <code>document</code>.</td>
