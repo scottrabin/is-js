@@ -1,0 +1,29 @@
+{
+  "author": "Scott Rabin <scottrabin@gmail.com> (http://scottrabin.com)",
+  "name": "is-js",
+  "description": "A small library for identifying Javascript types.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "homepage": "https://github.com/scottrabin/is-js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scottrabin/is-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/scottrabin/is-js/issues",
+    "email": "isjs@scottrabin.com"
+  },
+  "keywords": [
+    "javascript",
+    "types",
+    "util",
+    "is.js"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "main": "is.js"
+}
