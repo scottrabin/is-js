@@ -1,3 +1,9 @@
+/**
+ * is.js <https://github.com/scottrabin/is-js>
+ * Copyright (c) 2012 Scott Rabin
+ * @author Scott Rabin <scottrabin@gmail.com>
+ * @license MIT License <https://raw.github.com/scottrabin/is-js/master/MIT-LICENSE.txt>
+ */
 (function(root, factory) {
 	if (typeof define === 'function' && define.amd) {
 		// AMD; don't export to window globals
