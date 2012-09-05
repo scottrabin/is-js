@@ -20,10 +20,15 @@
     "is.js"
   ],
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "vows" : "0.6.x"
+  },
   "optionalDependencies": {},
   "engines": {
     "node": "*"
+  },
+  "scripts": {
+    "test": "vows ./test/*.vows.js --spec"
   },
   "main": "is.js"
 }
