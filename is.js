@@ -65,7 +65,7 @@
 			// fail fast for falsy/non-object/HTMLElement/window objects
 			// also check constructor properties - objects don't have their own constructor,
 			// and their constructor does not have its own `isPrototypeOf` function
-			if (!o || typeof o !== 'object' || is_element(o) || o === window ||
+			if (!o || typeof o !== 'object' || is_element(o) || (typeof window !== 'undefined' && o === window) ||
 			   (o.constructor && ! hasOwn.call(o, 'constructor') && ! hasOwn.call(o.constructor.prototype, 'isPrototypeOf'))
 			   ) {
 				return false;
