@@ -2,7 +2,7 @@
   "author": "Scott Rabin <scottrabin@gmail.com> (http://scottrabin.com)",
   "name": "is-js",
   "description": "A small library for identifying Javascript types.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "homepage": "https://github.com/scottrabin/is-js",
   "repository": {

@@ -4,7 +4,7 @@
 		// Node.js
 		module.exports = factory();
 	} else {
-		root.TEST_MAP = factory();
+		root.TEST_OBJECTS = factory();
 	}
 }(this, function() {
 	var TEST_OBJECTS = {
