@@ -28,7 +28,7 @@
     "node": "*"
   },
   "scripts": {
-    "test": "vows ./test/*.vows.js --spec"
+    "test": "vows ./test/*.vows.js"
   },
   "main": "is.js"
 }

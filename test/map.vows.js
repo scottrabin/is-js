@@ -11,18 +11,19 @@ var is     = require('../is.js'),
 
 // turn the test_map into a valid vows batch
 for(var func in test_map) {
-	(function(fn) {
-		suite[fn] = {};
-		for (var item in test_objects) {
+	suite[func] = {};
+	for (var testItem in test_objects) {
+		(function(fn, item) {
 			var should_pass = (typeof test_map[fn].pass === 'function' ?
 							   test_map[fn].pass(item, test_objects[item]) :
 							   test_map[fn].pass.indexOf(item) > -1
 							  );
+
 			suite[fn][item + ' ' + (should_pass ? 'is' : 'is not') + ' a(n) ' + test_map[fn].name] = function() {
 				assert.equal( is[fn](test_objects[item]), should_pass );
 			};
-		}
-	})(func);
+		})(func, testItem);
+	}
 }
 
 suite.inside = {};
