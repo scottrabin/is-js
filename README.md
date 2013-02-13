@@ -7,6 +7,8 @@ Cloning: `git clone https://github.com/scottrabin/is-js.git is-js`
 
 NPM: `npm install is-js`
 
+Bower: `bower install is-js`
+
 Usage
 -----
 
