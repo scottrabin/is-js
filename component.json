@@ -1,0 +1,15 @@
+{
+  "name": "is-js",
+  "author": "Scott Rabin <scottrabin@gmail.com> (http://scottrabin.com)",
+  "description": "A small library for identifying Javascript types.",
+  "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scottrabin/is-js.git"
+  },
+  "ignore" : [
+	"tests/",
+	"*.md"
+  ],
+  "main": "is.js"
+}
