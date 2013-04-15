@@ -45,7 +45,7 @@
 		// non-primitive builtin types
 		is_fn      = function(f) { return (typeof f === 'function'); },
 		// array - delegates to builtin if available
-		is_array   = ArrayProto.isArray || function(a) { return toString.call(a) === '[object Array]'; },
+		is_array   = Array.isArray || function(a) { return toString.call(a) === '[object Array]'; },
 		// basically all Javascript types are objects
 		is_object  = function(o) { return o === Object(o); },
 		// duck typing, because there isn't really a good way to do this
