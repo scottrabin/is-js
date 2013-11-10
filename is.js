@@ -123,4 +123,21 @@
 			return !container;
 		}
 	};
+
+	// all is.js methods, will be available
+	// as is.not.method, for negating purposes
+	is.not = {};
+	// negating all methods
+	for( var fn in is ) {
+		// skipping non-functions
+		if( is.hasOwnProperty(fn) && is.fn(is[fn]) ) {
+			// create closure to keep reference
+			(function(fn) {
+				is.not[ fn ] = function() {
+					return !is[fn].apply(this, arguments);
+				}	
+			})(fn)
+		}
+	}
+
 }));
