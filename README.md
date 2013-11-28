@@ -25,6 +25,14 @@ Usage
         <td>Determines if the argument is a number</td>
     </tr>
     <tr>
+        <td><code>is.float(n)</code></td>
+        <td>Determines if the argument is a float</td>
+    </tr>
+    <tr>
+        <td><code>is.integer(n)</code></td>
+        <td>Determines if the argument is an integer</td>
+    </tr>
+    <tr>
         <td><code>is.bool(b)</code></td>
         <td>Determines if the argument is a boolean (true or false)</td>
     </tr>
