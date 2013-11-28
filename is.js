@@ -42,6 +42,9 @@
 	//   see : http://jsperf.com/is-js
 	is.string  = function(s) { return (typeof s === 'string') || s instanceof String; };
 	is.number  = function(n) { return (typeof n === 'number') || n instanceof Number; };
+	// Use >,< because !== results in Infinity,NaN being "floats"
+	is.float   = function(n) { return is.number(n) && (n % 1 > 0 || n % 1 < 0); }
+	is.integer = function(n) { return is.number(n) && n % 1 === 0; }
 	is.bool    = function(b) { return b === !!b || b instanceof Boolean; };
 
 	// non-primitive builtin types
