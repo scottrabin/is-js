@@ -1,34 +1,40 @@
 {
-  "author": "Scott Rabin <scottrabin@gmail.com> (http://scottrabin.com)",
-  "name": "is-js",
-  "description": "A small library for identifying Javascript types.",
-  "version": "0.1.1",
-  "license": "MIT",
-  "homepage": "https://github.com/scottrabin/is-js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/scottrabin/is-js.git"
-  },
-  "bugs": {
-    "url": "https://github.com/scottrabin/is-js/issues",
-    "email": "isjs@scottrabin.com"
-  },
-  "keywords": [
-    "javascript",
-    "types",
-    "util",
-    "is.js"
-  ],
-  "dependencies": {},
-  "devDependencies": {
-    "vows" : "0.6.x"
-  },
-  "optionalDependencies": {},
-  "engines": {
-    "node": "*"
-  },
-  "scripts": {
-    "test": "vows ./test/*.vows.js"
-  },
-  "main": "is.js"
+	"name": "is-js",
+	"version": "0.2.0-pre",
+	"description": "A small library for identifying Javascript types.",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"docs": "typedoc --theme markdown --disableSources --readme none --hideBreadcrumbs --categorizeByGroup false --sort alphabetical --out docs src/index.ts && sed -i '' '/^## Usage/,$d' README.md && echo '## Usage' >> README.md && tail -n +4 docs/README.md | sed '/## Functions/,+1d' >> README.md",
+		"test": "jest"
+	},
+	"keywords": [
+		"javascript",
+		"types",
+		"util",
+		"is.js"
+	],
+	"author": "Scott Rabin <scottrabin@gmail.com> (http://scottrabin.com)",
+	"license": "MIT",
+	"homepage": "https://github.com/scottrabin/is-js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/scottrabin/is-js.git"
+	},
+	"bugs": {
+		"url": "https://github.com/scottrabin/is-js/issues",
+		"email": "isjs@scottrabin.com"
+	},
+	"dependencies": {
+		"typescript": "^4.6.2"
+	},
+	"devDependencies": {
+		"@types/jest": "^27.4.1",
+		"@types/node": "^17.0.21",
+		"jest": "^27.5.1",
+		"ts-jest": "^27.1.3",
+		"ts-node": "^10.7.0",
+		"typedoc": "^0.22.13",
+		"typedoc-plugin-markdown": "^3.11.14"
+	}
 }
