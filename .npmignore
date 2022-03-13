@@ -1,0 +1,8 @@
+.github/
+coverage/
+docs/
+src/
+tsconfig.json
+yarn.lock
+jest.config.ts
+*.tgz
