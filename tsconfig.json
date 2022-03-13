@@ -100,5 +100,9 @@
   },
   "include": [
     "src/**/*"
+  ],
+  "exclude": [
+    "**/__test__/**/*",
+    "src/**/*.test.ts"
   ]
 }
